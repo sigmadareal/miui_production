@@ -9,7 +9,7 @@ from werkzeug.exceptions import RequestEntityTooLarge
 
 app = Flask(__name__)
 CORS(app)
-app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 50 MB
+app.config['MAX_CONTENT_LENGTH'] = 600 * 1024 * 1024  # 50 MB
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'uploads')
 DECRYPTED_FOLDER = os.path.join(os.path.dirname(__file__), 'decrypted')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
